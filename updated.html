@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Jeevan Kalyan Samithi</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            z-index: 1000;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+        }
+        .hero {
+            position: relative;
+            overflow: hidden;
+            height: 400px;
+        }
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+        .hero img.active {
+            display: block;
+        }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .hero-content h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .hero-content p {
+            font-size: 1.2em;
+        }
+        .about, .services, .contact, .donate {
+            margin: 20px 0;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .about h2, .services h2, .contact h2, .donate h2 {
+            color: #333;
+        }
+        .services ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .services li {
+            background: #e0e0e0;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .services li:hover {
+            background-color: #d0d0d0;
+        }
+        .contact form {
+            max-width: 500px;
+            margin: auto;
+        }
+        .contact label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact button:hover {
+            background-color: #555;
+        }
+        .donate img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        @media (max-width: 768px) {
+            nav a {
+                float: none;
+                width: 100%;
+            }
+            .hero-content h1 {
+                font-size: 2em;
+            }
+            .hero-content p {
+                font-size: 1em;
+            }
+        }
+        /* Dynamic Cursor Effect */
+        #cursor {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #333;
+            pointer-events: none;
+            mix-blend-mode: difference;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jan Jeevan Kalyan Samithi</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#donate">Donate</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div id="cursor"></div>
+    <div class="hero">
+        <img src="https://images.indianexpress.com/2023/11/poverty-bihar.jpg?w=640" class="active" alt="Image 1">
+        <img src="https://assets.telegraphindia.com/telegraph/2021/Nov/1637925090_poverty.jpg" alt="Image 2">
+        <img src="https://media.licdn.com/dms/image/v2/D4D12AQHaIEiXr0hktQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1680589875453?e=1739404800&v=beta&t=seQltmQnyyb7tgc135VlJpH7xKZC3orlc3MW4pd9JN4" alt="Image 3">
+        <img src="https://img.theweek.in/content/dam/week/news/sci-tech/2020/april/Resident-of-slum-near-Sarai-Rohilla-Railway-line-poor-people-poverty-pti.jpg" alt="Image 4">
+        <img src="https://img.theweek.in/content/dam/week/news/sci-tech/2020/april/Resident-of-slum-near-Sarai-Rohilla-Railway-line-poor-people-poverty-pti.jpg" alt="Image 5">
+        <div class="hero-content">
+            <h1>Welcome to Jan Jeevan Kalyan Samithi</h1>
+            <p>Making lives better through community service.</p>
+        </div>
+    </div>
+    <div class="container">
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>Jan Jeevan Kalyan Samithi is a non-governmental organization dedicated to improving the quality of life for underprivileged communities. Our mission is to provide essential services and support to those in need.</p>
+        </section>
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Educational support and scholarships</li>
+                <li>Healthcare services and awareness programs</li>
+                <li>Emergency relief and disaster response</li>
+                <li>Community development projects</li>
+            </ul>
+        </section>
+        <section id="donate" class="donate">
+            <h2>Support Us</h2>
+            <p>Your donation can make a significant impact on our mission. Here are the bank details for your convenience:</p>
+            <p><strong>Account Name:</strong> Jan Jeevan Kalyan Samithi</p>
+            <p><strong>Bank Name:</strong> XYZ Bank</p>
+            <p><strong>Account Number:</strong> 1234567890</p>
+            <p><strong>IFSC Code:</strong> XYZ1234567</p>
+            <img src="https://via.placeholder.com/300x100" alt="QR Code for Donation">
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <form action="https://formspree.io/f/movqzkon" id="contactForm" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2023 Jan Jeevan Kalyan Samithi. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for your message!');
+            this.reset();
+        });
+
+        // Carousel functionality
+        const images = document.querySelectorAll('.hero img');
+        let currentIndex = 0;
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextImage, 3000); // Change image every 3 seconds
+    </script>
+</body>
+</html>
